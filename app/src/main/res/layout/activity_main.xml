@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="输入时间 (支持1900-2100年)"
+                android:textSize="16sp"
+                android:textColor="#2196F3"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- 一行显示年月日时分 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:weightSum="20">
+
+                <!-- 年 -->
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="0.8"
+                    android:text="年:"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.0"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:paddingEnd="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:maxLength="4"
+                        android:paddingVertical="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- 月 -->
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="0.8"
+                    android:text="月:"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.0"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:paddingEnd="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:maxLength="2"
+                        android:paddingVertical="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- 日 -->
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="0.8"
+                    android:text="日:"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.0"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:paddingEnd="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:maxLength="2"
+                        android:paddingVertical="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- 时 -->
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="0.8"
+                    android:text="时:"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.0"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:paddingEnd="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etHour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:maxLength="2"
+                        android:paddingVertical="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- 分 -->
+                <TextView
+                    android:layout_width="3dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="0.8"
+                    android:text="分:"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.0"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMinute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:maxLength="2"
+                        android:paddingVertical="8dp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="【内置算法 - 百年精准】"
+                android:textColor="#4CAF50"
+                android:textSize="12sp"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 其余部分保持不变 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCalculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开始排盘"
+            android:layout_marginEnd="8dp"
+            app:cornerRadius="8dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCopy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="复制全部信息"
+            app:cornerRadius="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="九宫数字盘"
+                        android:textSize="16sp"
+                        android:textColor="#2196F3"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="详细排盘结果"
+                        android:textSize="16sp"
+                        android:textColor="#2196F3"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp"/>
+
+                    <TextView
+                        android:id="@+id/tvResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:lineSpacingExtra="4dp"
+                        android:fontFamily="monospace"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 在现有的 "详细排盘结果" 卡片之后添加 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="析盘断局结果"
+                        android:textSize="16sp"
+                        android:textColor="#4CAF50"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp"/>
+
+                    <TextView
+                        android:id="@+id/tvAnalysis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:lineSpacingExtra="4dp"
+                        android:fontFamily="monospace"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
